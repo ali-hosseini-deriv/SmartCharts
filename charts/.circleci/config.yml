@@ -1,0 +1,207 @@
+version: 2.1
+orbs:
+  k8s: circleci/kubernetes@0.7.0
+  slack: circleci/slack@3.4.2
+commands:
+  git_checkout_from_cache:
+    description: "Git checkout and save cache"
+    steps:
+      - restore_cache:
+          name: Git restore cache
+          keys:
+            - source-v3-{{ .Branch }}-{{ .Revision }}
+            - source-v3-{{ .Branch }}-
+      - run:
+          name: Fetch git tags
+          command: |
+            mkdir -p ~/.ssh
+            ssh-keyscan github.com >> ~/.ssh/known_hosts
+            # Fetch tags if git cache is present
+            if [ -e /home/circleci/project/.git ]
+            then
+              git fetch origin --tags
+            fi
+      - checkout
+      - run:
+          name: Compress git objects
+          command: git gc
+      - save_cache:
+          name: Git save cache
+          key: source-v3-{{ .Branch }}-{{ .Revision }}
+          paths:
+            - ".git"
+  npm_install:
+    description: "Install node modules"
+    steps:
+      - restore_cache:
+          name: Restoring node_modules
+          keys:
+            - source-v3-modules-{{ checksum "package-lock.json" }}
+            - source-v3-modules
+      - run:
+          name: npm install
+          command: npm install
+      - save_cache:
+          name: Save node_module
+          key: source-v3-modules-{{ checksum "package-lock.json" }}
+          paths:
+            - "node_modules"
+  test:
+    description: Test App
+    steps:
+      - run:
+          name: Testing App
+          command: npm run test
+  build:
+    description: Build App
+    steps:
+      - run:
+          name: Building App
+          no_output_timeout: 30m
+          command: npm run build-travis
+  deploy:
+    description: "Deploy"
+    parameters:
+      target_branch:
+        type: string
+    steps:
+      - checkout
+      - attach_workspace:
+          at: dist
+      - run:
+          name: Tag build
+          command: echo "<< parameters.target_branch >> $(date -u +'%Y-%m-%dT%H:%M:%SZ')" > version
+      - run:
+          name: Install and configure dependencies
+          command: |
+            git config user.email "ci-build@bianry.com "
+            git config user.name "ci-build"
+      - add_ssh_keys:
+          fingerprints:
+            - "01:67:4a:6d:26:9c:70:c4:1a:60:91:88:d9:dd:f0:83"
+      - run:
+          name: Deploy docs to gh-pages branch
+          command: node ./node_modules/gh-pages/bin/gh-pages --dist '.' --src '{index.html,version,dist/*}' --branch << parameters.target_branch >> --message '[skip ci]'
+  docker_build_push:
+    description: "Build Docker image"
+    parameters:
+      docker_latest_image_tag:
+        type: string
+        default: "latest-staging"
+      docker_image_tag:
+        type: string
+        default: ${CIRCLE_SHA1}
+    steps:
+      - setup_remote_docker:
+          docker_layer_caching: true
+      - run:
+          name: Building docker image
+          command: |
+            docker build -t ${DOCKHUB_ORGANISATION}/binary-static-charts:<< parameters.docker_image_tag >> -t ${DOCKHUB_ORGANISATION}/binary-static-charts:<< parameters.docker_latest_image_tag >> .
+      - run:
+          name: Pushing Image to docker hub
+          command: |
+            echo $DOCKERHUB_PASSWORD | docker login -u $DOCKERHUB_USERNAME --password-stdin
+            docker push ${DOCKHUB_ORGANISATION}/binary-static-charts
+  k8s_deploy:
+    description: "Deploy to k8s cluster"
+    parameters:
+      k8s_version:
+        type: string
+        default: ${CIRCLE_SHA1}
+      k8s_namespace:
+        type: string
+        default: "charts-binary-com-staging"
+    steps:
+      - k8s/install-kubectl
+      - run:
+          name: Deploying to k8s cluster for service binary-charts
+          command: |
+            export NAMESPACE=<< parameters.k8s_namespace >>
+            git clone https://github.com/binary-com/devops-ci-scripts
+            cd devops-ci-scripts/k8s-build_tools
+            echo $CA_CRT | base64 --decode > ca.crt
+            ./release.sh binary-static-charts << parameters.k8s_version >>
+
+  notify_slack:
+    description: "Notify slack"
+    steps:
+      - slack/status:
+          include_project_field: false
+          failure_message: "Release failed for Smartchart with version *$(cat version)*"
+          success_message: "Release succeeded for Smartchart with version *$(cat version)*"
+          webhook: ${SLACK_WEBHOOK}
+jobs:
+  test:
+    docker:
+      - image: circleci/node:14.17.1
+    steps:
+      - git_checkout_from_cache
+      - npm_install
+      - test
+  release_staging:
+    docker:
+      - image: circleci/node:14.17.1
+    steps:
+      - git_checkout_from_cache
+      - npm_install
+      - test
+      - build
+      - deploy:
+          target_branch: "staging"
+      - docker_build_push
+      - k8s_deploy
+      - notify_slack
+  release_production:
+    docker:
+      - image: circleci/node:14.17.1
+    steps:
+      - git_checkout_from_cache
+      - npm_install
+      - test
+      - build
+      - deploy:
+          target_branch: "production"
+      - notify_slack
+  release_aws_production:
+    docker:
+      - image: circleci/node:14.17.1
+    steps:
+      - git_checkout_from_cache
+      - npm_install
+      - test
+      - build
+      - docker_build_push:
+          docker_latest_image_tag: latest
+          docker_image_tag: ${CIRCLE_TAG}
+      - k8s_deploy:
+          k8s_namespace: "charts-binary-com-production"
+          k8s_version: ${CIRCLE_TAG}
+      - notify_slack
+
+workflows:
+  test:
+    jobs:
+      - test:
+          filters:
+             branches:
+               ignore: /^master$/
+  release:
+    jobs:
+      - release_staging:
+          filters:
+            branches:
+              only: /^master$/
+      - release_production:
+          filters:
+            branches:
+              ignore: /.*/
+            tags:
+              only: /^production.*/
+      - release_aws_production:
+          filters:
+            branches:
+              ignore: /.*/
+            tags:
+              only: /^production.*/
+          context: binary-frontend-artifact-upload
