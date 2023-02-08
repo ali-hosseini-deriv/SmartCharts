@@ -1,6 +1,6 @@
 {
     "name": "@deriv/deriv-charts",
-    "version": "1.0.0",
+    "version": "1.1.1",
     "main": "dist/smartcharts.js",
     "author": "amin@binary.com",
     "contributors": [
@@ -91,6 +91,7 @@
         "eslint-plugin-react": "^7.31.7",
         "eslint-plugin-react-hooks": "^4.6.0",
         "eslint-webpack-plugin": "^3.2.0",
+        "eslint-loader": "4.0.2",
         "espree": "^6.0.0",
         "estree-walk": "^2.2.0",
         "file-loader": "^6.2.0",
