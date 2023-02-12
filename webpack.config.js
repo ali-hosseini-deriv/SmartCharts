@@ -6,12 +6,16 @@ const CopyWebpackPlugin = require('copy-webpack-plugin');
 const StyleLintPlugin = require('stylelint-webpack-plugin');
 const SpriteLoaderPlugin = require('svg-sprite-loader/plugin');
 const ForkTsCheckerWebpackPlugin = require('fork-ts-checker-webpack-plugin');
+const ESLintPlugin = require('eslint-webpack-plugin');
 
 const production = process.env.NODE_ENV === 'production';
 const isApp = process.env.BUILD_MODE === 'app';
 const BUILD_MODE = isApp ? process.env.BUILD_MODE : 'lib';
 const appEntryFile = isApp && process.env.APP_ENTRY ? process.env.APP_ENTRY : 'index';
-
+const options = {
+    extensions: [`js`, `jsx`],
+    exclude: [`/node_modules/`, `/bower_components/`, `/chartiq/`, `/scripts/`],
+};
 const output = {
     path: path.resolve(__dirname, 'dist'),
     filename: 'smartcharts.js',
@@ -35,8 +39,10 @@ const config = {
         extensions: ['.ts', '.tsx', '.js'],
     },
     devServer: {
-        publicPath: '/dist/',
-        writeToDisk: true,
+        devMiddleware: {
+            writeToDisk: true,
+            publicPath: '/dist/',
+        },
     },
     module: {
         rules: [
@@ -83,20 +89,27 @@ const config = {
                     {
                         loader: 'sass-loader',
                         options: {
+                            implementation: require.resolve('sass'),
                             sourceMap: true,
-                            data: '@import "sass/_variables.scss";@import "sass/_themes.scss";',
-                            includePaths: [path.resolve(__dirname, './src')],
+                            additionalData: (content, loaderContext) => {
+                                // test the items in ExcludeThem array and return the content if it is in the array
+                                if (loaderContext.resourcePath.endsWith('sass/_themes.scss')) {
+                                    return `
+                                     @import "sass/_variables.scss";
+                                     ${content}`;
+                                }
+                                return `
+                                    @import "sass/_themes.scss";@import "sass/_variables.scss";
+                                    ${content}`;
+                            },
+
+
+                            sassOptions: {
+                                includePaths: [path.resolve(__dirname, './src')],
+                            },
                         },
                     },
                 ],
-            },
-            { parser: { amd: false } },
-            {
-                test: /\.(js|jsx)$/,
-                exclude: [/node_modules/, /\\chartiq/, /\\scripts/],
-                loader: 'eslint-loader',
-                enforce: 'pre',
-                options: { fix: true },
             },
             {
                 test: /\.(js|jsx|ts|tsx)$/,
@@ -105,11 +118,11 @@ const config = {
             },
             {
                 test: /\.po$/,
-                loader: [path.resolve('./loaders/translation-loader.js'), 'json-loader', 'po-loader'],
+                use: [path.resolve('./loaders/translation-loader.js'), 'json-loader', 'po-loader'],
             },
             {
                 test: /\.pot$/,
-                loader: [path.resolve('./loaders/pot-loader.js'), 'json-loader', 'po-loader'],
+                use: [path.resolve('./loaders/pot-loader.js'), 'json-loader', 'po-loader'],
             },
             {
                 include: path.resolve(__dirname, 'src/utils/ga.js'),
@@ -126,6 +139,7 @@ const config = {
         ],
     },
     plugins: [
+        new ESLintPlugin(options),
         new webpack.ProvidePlugin({
             t: [path.resolve(__dirname, './src/Translation.ts'), 't'],
         }),
