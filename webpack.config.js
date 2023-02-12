@@ -25,6 +25,10 @@ const output = {
     libraryTarget: 'umd',
     hashDigestLength: 6,
 };
+const PostCSSImport = require('postcss-import');
+const PostCSSPresetEnv = require('postcss-preset-env');
+const PostCSSInlineSVG = require('postcss-inline-svg');
+const PostCSSSVGO = require('postcss-svgo');
 
 const config = {
     devtool: 'source-map',
@@ -77,20 +81,21 @@ const config = {
                     {
                         loader: 'postcss-loader',
                         options: {
-                            ident: 'postcss',
-                            plugins: loader => [
-                                require('postcss-import')({ root: loader.resourcePath }),
-                                require('postcss-preset-env')(),
-                                require('postcss-inline-svg'),
-                                require('postcss-svgo'),
-                            ],
+                            postcssOptions: {
+
+                                plugins: loader => [
+                                    PostCSSImport({ root: loader.resourcePath }),
+                                    PostCSSPresetEnv(),
+                                    PostCSSInlineSVG,
+                                    PostCSSSVGO,
+                                ],
+                            },
                         },
                     },
                     {
                         loader: 'sass-loader',
                         options: {
-                            implementation: require.resolve('sass'),
-                            sourceMap: true,
+                            sourceMap: !production,
                             additionalData: (content, loaderContext) => {
                                 // test the items in ExcludeThem array and return the content if it is in the array
                                 if (loaderContext.resourcePath.endsWith('sass/_themes.scss')) {
@@ -102,7 +107,6 @@ const config = {
                                     @import "sass/_themes.scss";@import "sass/_variables.scss";
                                     ${content}`;
                             },
-
 
                             sassOptions: {
                                 includePaths: [path.resolve(__dirname, './src')],
@@ -144,7 +148,7 @@ const config = {
             t: [path.resolve(__dirname, './src/Translation.ts'), 't'],
         }),
         new MiniCssExtractPlugin({ filename: 'smartcharts.css' }),
-        new StyleLintPlugin(),
+        new StyleLintPlugin({customSyntax: 'postcss-scss'}),
         new SpriteLoaderPlugin(),
         new ForkTsCheckerWebpackPlugin(),
     ],
