@@ -1,6 +1,7 @@
 {
   "plugins": [
-    "stylelint-no-unsupported-browser-features"
+    "stylelint-no-unsupported-browser-features",
+    "stylelint-scss"
   ],
   "rules": {
     "at-rule-name-case"                                : "lower",
@@ -47,7 +48,7 @@
     "no-extra-semicolons"                              : true,
     "no-invalid-double-slash-comments"                 : true,
     "number-leading-zero"                              : "always",
-    "number-max-precision"                             : 2,
+    "number-max-precision"                             : 3,
     "number-no-trailing-zeros"                         : true,
     "property-case"                                    : "lower",
     "plugin/no-unsupported-browser-features"           : [true, {
@@ -75,11 +76,11 @@
     "selector-type-no-unknown"                         : [true, { "ignoreTypes": ["from", "to", "0%", "50%", "100%", "_"] }],
     "shorthand-property-no-redundant-values"           : true,
     "string-no-newline"                                : true,
-    "string-quotes"                                    : "single",
+    "string-quotes"                                    : null,
     "time-min-milliseconds"                            : 100,
     "unit-case"                                        : "lower",
-    "unit-whitelist"                                   : ["fr", "px", "em", "rem", "%", "vw", "vh", "deg", "ms", "s"],
-    "value-keyword-case"                               : "lower",
+    "unit-allowed-list"                                : ["fr", "px", "em", "rem", "%", "vw", "vh", "deg", "ms", "s"],
+    "value-keyword-case"                               : null,
     "value-list-comma-newline-after"                   : "never-multi-line",
     "value-list-comma-newline-before"                  : "never-multi-line",
     "value-list-comma-space-after"                     : "always",
