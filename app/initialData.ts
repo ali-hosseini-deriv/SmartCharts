@@ -3,6 +3,7 @@ import { TInitialChartData } from 'src/types';
 
 export const MockActiveSymbol: TInitialChartData['activeSymbols'] = [
     {
+        display_order: 0,
         allow_forward_starting: 0,
         display_name: 'AUD Basket',
         exchange_is_open: 1,
@@ -18,6 +19,7 @@ export const MockActiveSymbol: TInitialChartData['activeSymbols'] = [
         symbol_type: 'forex_basket',
     },
     {
+        display_order: 0,
         allow_forward_starting: 1,
         display_name: 'AUD/CAD',
         exchange_is_open: 1,
@@ -33,6 +35,7 @@ export const MockActiveSymbol: TInitialChartData['activeSymbols'] = [
         symbol_type: 'forex',
     },
     {
+        display_order: 0,
         allow_forward_starting: 1,
         display_name: 'AUD/CHF',
         exchange_is_open: 1,
@@ -48,6 +51,8 @@ export const MockActiveSymbol: TInitialChartData['activeSymbols'] = [
         symbol_type: 'forex',
     },
     {
+        display_order: 0,
+
         allow_forward_starting: 1,
         display_name: 'AUD/JPY',
         exchange_is_open: 1,
@@ -63,6 +68,8 @@ export const MockActiveSymbol: TInitialChartData['activeSymbols'] = [
         symbol_type: 'forex',
     },
     {
+        display_order: 0,
+
         allow_forward_starting: 1,
         display_name: 'AUD/NZD',
         exchange_is_open: 1,
@@ -78,6 +85,7 @@ export const MockActiveSymbol: TInitialChartData['activeSymbols'] = [
         symbol_type: 'forex',
     },
     {
+        display_order: 0,
         allow_forward_starting: 1,
         display_name: 'AUD/USD',
         exchange_is_open: 1,
@@ -93,6 +101,7 @@ export const MockActiveSymbol: TInitialChartData['activeSymbols'] = [
         symbol_type: 'forex',
     },
     {
+        display_order: 0,
         allow_forward_starting: 1,
         display_name: 'Australian Index',
         exchange_is_open: 1,
@@ -108,6 +117,7 @@ export const MockActiveSymbol: TInitialChartData['activeSymbols'] = [
         symbol_type: 'stockindex',
     },
     {
+        display_order: 0,
         allow_forward_starting: 1,
         display_name: 'Bear Market Index',
         exchange_is_open: 1,
@@ -123,6 +133,7 @@ export const MockActiveSymbol: TInitialChartData['activeSymbols'] = [
         symbol_type: 'stockindex',
     },
     {
+        display_order: 0,
         allow_forward_starting: 1,
         display_name: 'Bull Market Index',
         exchange_is_open: 1,
@@ -138,6 +149,7 @@ export const MockActiveSymbol: TInitialChartData['activeSymbols'] = [
         symbol_type: 'stockindex',
     },
     {
+        display_order: 0,
         allow_forward_starting: 1,
         display_name: 'Dutch Index',
         exchange_is_open: 0,
@@ -153,6 +165,7 @@ export const MockActiveSymbol: TInitialChartData['activeSymbols'] = [
         symbol_type: 'stockindex',
     },
     {
+        display_order: 0,
         allow_forward_starting: 0,
         display_name: 'EUR Basket',
         exchange_is_open: 1,
@@ -168,6 +181,7 @@ export const MockActiveSymbol: TInitialChartData['activeSymbols'] = [
         symbol_type: 'forex_basket',
     },
     {
+        display_order: 0,
         allow_forward_starting: 1,
         display_name: 'EUR/AUD',
         exchange_is_open: 1,
@@ -183,6 +197,7 @@ export const MockActiveSymbol: TInitialChartData['activeSymbols'] = [
         symbol_type: 'forex',
     },
     {
+        display_order: 0,
         allow_forward_starting: 1,
         display_name: 'EUR/CAD',
         exchange_is_open: 1,
@@ -198,6 +213,7 @@ export const MockActiveSymbol: TInitialChartData['activeSymbols'] = [
         symbol_type: 'forex',
     },
     {
+        display_order: 0,
         allow_forward_starting: 1,
         display_name: 'EUR/CHF',
         exchange_is_open: 1,
@@ -213,6 +229,7 @@ export const MockActiveSymbol: TInitialChartData['activeSymbols'] = [
         symbol_type: 'forex',
     },
     {
+        display_order: 0,
         allow_forward_starting: 1,
         display_name: 'EUR/GBP',
         exchange_is_open: 1,
@@ -228,6 +245,7 @@ export const MockActiveSymbol: TInitialChartData['activeSymbols'] = [
         symbol_type: 'forex',
     },
     {
+        display_order: 0,
         allow_forward_starting: 1,
         display_name: 'EUR/JPY',
         exchange_is_open: 1,
@@ -243,6 +261,7 @@ export const MockActiveSymbol: TInitialChartData['activeSymbols'] = [
         symbol_type: 'forex',
     },
     {
+        display_order: 0,
         allow_forward_starting: 1,
         display_name: 'EUR/NZD',
         exchange_is_open: 1,
@@ -258,6 +277,7 @@ export const MockActiveSymbol: TInitialChartData['activeSymbols'] = [
         symbol_type: 'forex',
     },
     {
+        display_order: 0,
         allow_forward_starting: 1,
         display_name: 'EUR/USD',
         exchange_is_open: 1,
@@ -273,6 +293,7 @@ export const MockActiveSymbol: TInitialChartData['activeSymbols'] = [
         symbol_type: 'forex',
     },
     {
+        display_order: 0,
         allow_forward_starting: 1,
         display_name: 'Euro 50 Index',
         exchange_is_open: 0,
@@ -288,6 +309,7 @@ export const MockActiveSymbol: TInitialChartData['activeSymbols'] = [
         symbol_type: 'stockindex',
     },
     {
+        display_order: 0,
         allow_forward_starting: 1,
         display_name: 'French Index',
         exchange_is_open: 0,
@@ -303,6 +325,7 @@ export const MockActiveSymbol: TInitialChartData['activeSymbols'] = [
         symbol_type: 'stockindex',
     },
     {
+        display_order: 0,
         allow_forward_starting: 0,
         display_name: 'GBP Basket',
         exchange_is_open: 1,
@@ -318,6 +341,7 @@ export const MockActiveSymbol: TInitialChartData['activeSymbols'] = [
         symbol_type: 'forex_basket',
     },
     {
+        display_order: 0,
         allow_forward_starting: 1,
         display_name: 'GBP/AUD',
         exchange_is_open: 1,
@@ -333,6 +357,7 @@ export const MockActiveSymbol: TInitialChartData['activeSymbols'] = [
         symbol_type: 'forex',
     },
     {
+        display_order: 0,
         allow_forward_starting: 1,
         display_name: 'GBP/CAD',
         exchange_is_open: 1,
@@ -348,6 +373,7 @@ export const MockActiveSymbol: TInitialChartData['activeSymbols'] = [
         symbol_type: 'forex',
     },
     {
+        display_order: 0,
         allow_forward_starting: 1,
         display_name: 'GBP/CHF',
         exchange_is_open: 1,
@@ -363,6 +389,7 @@ export const MockActiveSymbol: TInitialChartData['activeSymbols'] = [
         symbol_type: 'forex',
     },
     {
+        display_order: 0,
         allow_forward_starting: 1,
         display_name: 'GBP/JPY',
         exchange_is_open: 1,
@@ -378,6 +405,7 @@ export const MockActiveSymbol: TInitialChartData['activeSymbols'] = [
         symbol_type: 'forex',
     },
     {
+        display_order: 0,
         allow_forward_starting: 1,
         display_name: 'GBP/NOK',
         exchange_is_open: 1,
@@ -393,6 +421,7 @@ export const MockActiveSymbol: TInitialChartData['activeSymbols'] = [
         symbol_type: 'forex',
     },
     {
+        display_order: 0,
         allow_forward_starting: 1,
         display_name: 'GBP/NZD',
         exchange_is_open: 1,
@@ -408,6 +437,7 @@ export const MockActiveSymbol: TInitialChartData['activeSymbols'] = [
         symbol_type: 'forex',
     },
     {
+        display_order: 0,
         allow_forward_starting: 1,
         display_name: 'GBP/USD',
         exchange_is_open: 1,
@@ -423,6 +453,7 @@ export const MockActiveSymbol: TInitialChartData['activeSymbols'] = [
         symbol_type: 'forex',
     },
     {
+        display_order: 0,
         allow_forward_starting: 1,
         display_name: 'German Index',
         exchange_is_open: 0,
@@ -438,6 +469,7 @@ export const MockActiveSymbol: TInitialChartData['activeSymbols'] = [
         symbol_type: 'stockindex',
     },
     {
+        display_order: 0,
         allow_forward_starting: 1,
         display_name: 'Gold/USD',
         exchange_is_open: 1,
@@ -453,6 +485,7 @@ export const MockActiveSymbol: TInitialChartData['activeSymbols'] = [
         symbol_type: 'commodities',
     },
     {
+        display_order: 0,
         allow_forward_starting: 1,
         display_name: 'Hong Kong Index',
         exchange_is_open: 1,
@@ -468,6 +501,7 @@ export const MockActiveSymbol: TInitialChartData['activeSymbols'] = [
         symbol_type: 'stockindex',
     },
     {
+        display_order: 0,
         allow_forward_starting: 1,
         display_name: 'Japanese Index',
         exchange_is_open: 1,
@@ -483,6 +517,7 @@ export const MockActiveSymbol: TInitialChartData['activeSymbols'] = [
         symbol_type: 'stockindex',
     },
     {
+        display_order: 0,
         allow_forward_starting: 1,
         display_name: 'NZD/JPY',
         exchange_is_open: 1,
@@ -498,6 +533,7 @@ export const MockActiveSymbol: TInitialChartData['activeSymbols'] = [
         symbol_type: 'forex',
     },
     {
+        display_order: 0,
         allow_forward_starting: 1,
         display_name: 'NZD/USD',
         exchange_is_open: 1,
@@ -513,6 +549,7 @@ export const MockActiveSymbol: TInitialChartData['activeSymbols'] = [
         symbol_type: 'forex',
     },
     {
+        display_order: 0,
         allow_forward_starting: 1,
         display_name: 'Oil/USD',
         exchange_is_open: 0,
@@ -528,6 +565,7 @@ export const MockActiveSymbol: TInitialChartData['activeSymbols'] = [
         symbol_type: 'commodities',
     },
     {
+        display_order: 0,
         allow_forward_starting: 0,
         display_name: 'Palladium/USD',
         exchange_is_open: 1,
@@ -543,6 +581,7 @@ export const MockActiveSymbol: TInitialChartData['activeSymbols'] = [
         symbol_type: 'commodities',
     },
     {
+        display_order: 0,
         allow_forward_starting: 0,
         display_name: 'Platinum/USD',
         exchange_is_open: 1,
@@ -558,6 +597,7 @@ export const MockActiveSymbol: TInitialChartData['activeSymbols'] = [
         symbol_type: 'commodities',
     },
     {
+        display_order: 0,
         allow_forward_starting: 1,
         display_name: 'Silver/USD',
         exchange_is_open: 1,
@@ -573,6 +613,7 @@ export const MockActiveSymbol: TInitialChartData['activeSymbols'] = [
         symbol_type: 'commodities',
     },
     {
+        display_order: 0,
         allow_forward_starting: 1,
         display_name: 'Swiss Index',
         exchange_is_open: 0,
@@ -588,6 +629,7 @@ export const MockActiveSymbol: TInitialChartData['activeSymbols'] = [
         symbol_type: 'stockindex',
     },
     {
+        display_order: 0,
         allow_forward_starting: 1,
         display_name: 'UK Index',
         exchange_is_open: 0,
@@ -603,6 +645,7 @@ export const MockActiveSymbol: TInitialChartData['activeSymbols'] = [
         symbol_type: 'stockindex',
     },
     {
+        display_order: 0,
         allow_forward_starting: 1,
         display_name: 'US Index',
         exchange_is_open: 0,
@@ -618,6 +661,7 @@ export const MockActiveSymbol: TInitialChartData['activeSymbols'] = [
         symbol_type: 'stockindex',
     },
     {
+        display_order: 0,
         allow_forward_starting: 1,
         display_name: 'US Tech Index',
         exchange_is_open: 0,
@@ -633,6 +677,7 @@ export const MockActiveSymbol: TInitialChartData['activeSymbols'] = [
         symbol_type: 'stockindex',
     },
     {
+        display_order: 0,
         allow_forward_starting: 0,
         display_name: 'USD Basket',
         exchange_is_open: 1,
@@ -648,6 +693,7 @@ export const MockActiveSymbol: TInitialChartData['activeSymbols'] = [
         symbol_type: 'forex_basket',
     },
     {
+        display_order: 0,
         allow_forward_starting: 1,
         display_name: 'USD/CAD',
         exchange_is_open: 1,
@@ -663,6 +709,7 @@ export const MockActiveSymbol: TInitialChartData['activeSymbols'] = [
         symbol_type: 'forex',
     },
     {
+        display_order: 0,
         allow_forward_starting: 1,
         display_name: 'USD/CHF',
         exchange_is_open: 1,
@@ -678,6 +725,7 @@ export const MockActiveSymbol: TInitialChartData['activeSymbols'] = [
         symbol_type: 'forex',
     },
     {
+        display_order: 0,
         allow_forward_starting: 1,
         display_name: 'USD/JPY',
         exchange_is_open: 1,
@@ -693,6 +741,7 @@ export const MockActiveSymbol: TInitialChartData['activeSymbols'] = [
         symbol_type: 'forex',
     },
     {
+        display_order: 0,
         allow_forward_starting: 1,
         display_name: 'USD/MXN',
         exchange_is_open: 1,
@@ -708,6 +757,7 @@ export const MockActiveSymbol: TInitialChartData['activeSymbols'] = [
         symbol_type: 'forex',
     },
     {
+        display_order: 0,
         allow_forward_starting: 1,
         display_name: 'USD/NOK',
         exchange_is_open: 1,
@@ -723,6 +773,7 @@ export const MockActiveSymbol: TInitialChartData['activeSymbols'] = [
         symbol_type: 'forex',
     },
     {
+        display_order: 0,
         allow_forward_starting: 1,
         display_name: 'USD/PLN',
         exchange_is_open: 1,
@@ -738,6 +789,7 @@ export const MockActiveSymbol: TInitialChartData['activeSymbols'] = [
         symbol_type: 'forex',
     },
     {
+        display_order: 0,
         allow_forward_starting: 1,
         display_name: 'USD/SEK',
         exchange_is_open: 1,
@@ -753,6 +805,7 @@ export const MockActiveSymbol: TInitialChartData['activeSymbols'] = [
         symbol_type: 'forex',
     },
     {
+        display_order: 0,
         allow_forward_starting: 1,
         display_name: 'Volatility 10 (1s) Index',
         exchange_is_open: 1,
@@ -768,6 +821,7 @@ export const MockActiveSymbol: TInitialChartData['activeSymbols'] = [
         symbol_type: 'stockindex',
     },
     {
+        display_order: 0,
         allow_forward_starting: 1,
         display_name: 'Volatility 10 Index',
         exchange_is_open: 1,
@@ -783,6 +837,7 @@ export const MockActiveSymbol: TInitialChartData['activeSymbols'] = [
         symbol_type: 'stockindex',
     },
     {
+        display_order: 0,
         allow_forward_starting: 1,
         display_name: 'Volatility 25 (1s) Index',
         exchange_is_open: 1,
@@ -798,6 +853,7 @@ export const MockActiveSymbol: TInitialChartData['activeSymbols'] = [
         symbol_type: 'stockindex',
     },
     {
+        display_order: 0,
         allow_forward_starting: 1,
         display_name: 'Volatility 25 Index',
         exchange_is_open: 1,
@@ -813,6 +869,7 @@ export const MockActiveSymbol: TInitialChartData['activeSymbols'] = [
         symbol_type: 'stockindex',
     },
     {
+        display_order: 0,
         allow_forward_starting: 1,
         display_name: 'Volatility 50 (1s) Index',
         exchange_is_open: 1,
@@ -828,6 +885,7 @@ export const MockActiveSymbol: TInitialChartData['activeSymbols'] = [
         symbol_type: 'stockindex',
     },
     {
+        display_order: 0,
         allow_forward_starting: 1,
         display_name: 'Volatility 50 Index',
         exchange_is_open: 1,
@@ -843,6 +901,7 @@ export const MockActiveSymbol: TInitialChartData['activeSymbols'] = [
         symbol_type: 'stockindex',
     },
     {
+        display_order: 0,
         allow_forward_starting: 1,
         display_name: 'Volatility 75 (1s) Index',
         exchange_is_open: 1,
@@ -858,6 +917,7 @@ export const MockActiveSymbol: TInitialChartData['activeSymbols'] = [
         symbol_type: 'stockindex',
     },
     {
+        display_order: 0,
         allow_forward_starting: 1,
         display_name: 'Volatility 75 Index',
         exchange_is_open: 1,
@@ -873,6 +933,7 @@ export const MockActiveSymbol: TInitialChartData['activeSymbols'] = [
         symbol_type: 'stockindex',
     },
     {
+        display_order: 0,
         allow_forward_starting: 1,
         display_name: 'Volatility 100 (1s) Index',
         exchange_is_open: 1,
@@ -888,6 +949,7 @@ export const MockActiveSymbol: TInitialChartData['activeSymbols'] = [
         symbol_type: 'stockindex',
     },
     {
+        display_order: 0,
         allow_forward_starting: 1,
         display_name: 'Volatility 100 Index',
         exchange_is_open: 1,
@@ -903,6 +965,7 @@ export const MockActiveSymbol: TInitialChartData['activeSymbols'] = [
         symbol_type: 'stockindex',
     },
     {
+        display_order: 0,
         allow_forward_starting: 1,
         display_name: 'Wall Street Index',
         exchange_is_open: 0,
@@ -918,6 +981,7 @@ export const MockActiveSymbol: TInitialChartData['activeSymbols'] = [
         symbol_type: 'stockindex',
     },
     {
+        display_order: 0,
         allow_forward_starting: 0,
         display_name: 'BTC/USD',
         exchange_is_open: 1,
@@ -933,6 +997,7 @@ export const MockActiveSymbol: TInitialChartData['activeSymbols'] = [
         symbol_type: 'cryptocurrency',
     },
     {
+        display_order: 0,
         allow_forward_starting: 0,
         display_name: 'ETH/USD',
         exchange_is_open: 1,
@@ -964,8 +1029,6 @@ const trading_times: TradingTimesResponse['trading_times'] = {
                                 { dates: '2021-01-01', descrip: "New Year's Day" },
                             ],
                             name: 'AUD/JPY',
-                            subgroup: 'none',
-                            subgroup_display_name: 'None',
                             symbol: 'frxAUDJPY',
                             times: { close: ['23:59:59'], open: ['00:00:00'], settlement: '23:59:59' },
                             trading_days: ['Mon', 'Tue', 'Wed', 'Thu', 'Fri'],
@@ -977,8 +1040,7 @@ const trading_times: TradingTimesResponse['trading_times'] = {
                                 { dates: '2021-01-01', descrip: "New Year's Day" },
                             ],
                             name: 'AUD/USD',
-                            subgroup: 'none',
-                            subgroup_display_name: 'None',
+
                             symbol: 'frxAUDUSD',
                             times: { close: ['23:59:59'], open: ['00:00:00'], settlement: '23:59:59' },
                             trading_days: ['Mon', 'Tue', 'Wed', 'Thu', 'Fri'],
@@ -990,8 +1052,7 @@ const trading_times: TradingTimesResponse['trading_times'] = {
                                 { dates: '2021-01-01', descrip: "New Year's Day" },
                             ],
                             name: 'EUR/AUD',
-                            subgroup: 'none',
-                            subgroup_display_name: 'None',
+
                             symbol: 'frxEURAUD',
                             times: { close: ['23:59:59'], open: ['00:00:00'], settlement: '23:59:59' },
                             trading_days: ['Mon', 'Tue', 'Wed', 'Thu', 'Fri'],
@@ -1003,8 +1064,7 @@ const trading_times: TradingTimesResponse['trading_times'] = {
                                 { dates: '2021-01-01', descrip: "New Year's Day" },
                             ],
                             name: 'EUR/CAD',
-                            subgroup: 'none',
-                            subgroup_display_name: 'None',
+
                             symbol: 'frxEURCAD',
                             times: { close: ['23:59:59'], open: ['00:00:00'], settlement: '23:59:59' },
                             trading_days: ['Mon', 'Tue', 'Wed', 'Thu', 'Fri'],
@@ -1016,8 +1076,7 @@ const trading_times: TradingTimesResponse['trading_times'] = {
                                 { dates: '2021-01-01', descrip: "New Year's Day" },
                             ],
                             name: 'EUR/CHF',
-                            subgroup: 'none',
-                            subgroup_display_name: 'None',
+
                             symbol: 'frxEURCHF',
                             times: { close: ['23:59:59'], open: ['00:00:00'], settlement: '23:59:59' },
                             trading_days: ['Mon', 'Tue', 'Wed', 'Thu', 'Fri'],
@@ -1029,8 +1088,7 @@ const trading_times: TradingTimesResponse['trading_times'] = {
                                 { dates: '2021-01-01', descrip: "New Year's Day" },
                             ],
                             name: 'EUR/GBP',
-                            subgroup: 'none',
-                            subgroup_display_name: 'None',
+
                             symbol: 'frxEURGBP',
                             times: { close: ['23:59:59'], open: ['00:00:00'], settlement: '23:59:59' },
                             trading_days: ['Mon', 'Tue', 'Wed', 'Thu', 'Fri'],
@@ -1042,8 +1100,7 @@ const trading_times: TradingTimesResponse['trading_times'] = {
                                 { dates: '2021-01-01', descrip: "New Year's Day" },
                             ],
                             name: 'EUR/JPY',
-                            subgroup: 'none',
-                            subgroup_display_name: 'None',
+
                             symbol: 'frxEURJPY',
                             times: { close: ['23:59:59'], open: ['00:00:00'], settlement: '23:59:59' },
                             trading_days: ['Mon', 'Tue', 'Wed', 'Thu', 'Fri'],
@@ -1055,8 +1112,7 @@ const trading_times: TradingTimesResponse['trading_times'] = {
                                 { dates: '2021-01-01', descrip: "New Year's Day" },
                             ],
                             name: 'EUR/USD',
-                            subgroup: 'none',
-                            subgroup_display_name: 'None',
+
                             symbol: 'frxEURUSD',
                             times: { close: ['23:59:59'], open: ['00:00:00'], settlement: '23:59:59' },
                             trading_days: ['Mon', 'Tue', 'Wed', 'Thu', 'Fri'],
@@ -1068,8 +1124,7 @@ const trading_times: TradingTimesResponse['trading_times'] = {
                                 { dates: '2021-01-01', descrip: "New Year's Day" },
                             ],
                             name: 'GBP/AUD',
-                            subgroup: 'none',
-                            subgroup_display_name: 'None',
+
                             symbol: 'frxGBPAUD',
                             times: { close: ['23:59:59'], open: ['00:00:00'], settlement: '23:59:59' },
                             trading_days: ['Mon', 'Tue', 'Wed', 'Thu', 'Fri'],
@@ -1081,8 +1136,7 @@ const trading_times: TradingTimesResponse['trading_times'] = {
                                 { dates: '2021-01-01', descrip: "New Year's Day" },
                             ],
                             name: 'GBP/JPY',
-                            subgroup: 'none',
-                            subgroup_display_name: 'None',
+
                             symbol: 'frxGBPJPY',
                             times: { close: ['23:59:59'], open: ['00:00:00'], settlement: '23:59:59' },
                             trading_days: ['Mon', 'Tue', 'Wed', 'Thu', 'Fri'],
@@ -1094,8 +1148,7 @@ const trading_times: TradingTimesResponse['trading_times'] = {
                                 { dates: '2021-01-01', descrip: "New Year's Day" },
                             ],
                             name: 'GBP/USD',
-                            subgroup: 'none',
-                            subgroup_display_name: 'None',
+
                             symbol: 'frxGBPUSD',
                             times: { close: ['23:59:59'], open: ['00:00:00'], settlement: '23:59:59' },
                             trading_days: ['Mon', 'Tue', 'Wed', 'Thu', 'Fri'],
@@ -1107,8 +1160,7 @@ const trading_times: TradingTimesResponse['trading_times'] = {
                                 { dates: '2021-01-01', descrip: "New Year's Day" },
                             ],
                             name: 'USD/CAD',
-                            subgroup: 'none',
-                            subgroup_display_name: 'None',
+
                             symbol: 'frxUSDCAD',
                             times: { close: ['23:59:59'], open: ['00:00:00'], settlement: '23:59:59' },
                             trading_days: ['Mon', 'Tue', 'Wed', 'Thu', 'Fri'],
@@ -1120,8 +1172,7 @@ const trading_times: TradingTimesResponse['trading_times'] = {
                                 { dates: '2021-01-01', descrip: "New Year's Day" },
                             ],
                             name: 'USD/CHF',
-                            subgroup: 'none',
-                            subgroup_display_name: 'None',
+
                             symbol: 'frxUSDCHF',
                             times: { close: ['23:59:59'], open: ['00:00:00'], settlement: '23:59:59' },
                             trading_days: ['Mon', 'Tue', 'Wed', 'Thu', 'Fri'],
@@ -1133,8 +1184,7 @@ const trading_times: TradingTimesResponse['trading_times'] = {
                                 { dates: '2021-01-01', descrip: "New Year's Day" },
                             ],
                             name: 'USD/JPY',
-                            subgroup: 'none',
-                            subgroup_display_name: 'None',
+
                             symbol: 'frxUSDJPY',
                             times: { close: ['23:59:59'], open: ['00:00:00'], settlement: '23:59:59' },
                             trading_days: ['Mon', 'Tue', 'Wed', 'Thu', 'Fri'],
@@ -1151,8 +1201,7 @@ const trading_times: TradingTimesResponse['trading_times'] = {
                                 { dates: '2021-01-01', descrip: "New Year's Day" },
                             ],
                             name: 'AUD/CAD',
-                            subgroup: 'none',
-                            subgroup_display_name: 'None',
+
                             symbol: 'frxAUDCAD',
                             times: { close: ['23:59:59'], open: ['00:00:00'], settlement: '23:59:59' },
                             trading_days: ['Mon', 'Tue', 'Wed', 'Thu', 'Fri'],
@@ -1164,8 +1213,7 @@ const trading_times: TradingTimesResponse['trading_times'] = {
                                 { dates: '2021-01-01', descrip: "New Year's Day" },
                             ],
                             name: 'AUD/CHF',
-                            subgroup: 'none',
-                            subgroup_display_name: 'None',
+
                             symbol: 'frxAUDCHF',
                             times: { close: ['23:59:59'], open: ['00:00:00'], settlement: '23:59:59' },
                             trading_days: ['Mon', 'Tue', 'Wed', 'Thu', 'Fri'],
@@ -1177,8 +1225,7 @@ const trading_times: TradingTimesResponse['trading_times'] = {
                                 { dates: '2021-01-01', descrip: "New Year's Day" },
                             ],
                             name: 'AUD/NZD',
-                            subgroup: 'none',
-                            subgroup_display_name: 'None',
+
                             symbol: 'frxAUDNZD',
                             times: { close: ['23:59:59'], open: ['00:00:00'], settlement: '23:59:59' },
                             trading_days: ['Mon', 'Tue', 'Wed', 'Thu', 'Fri'],
@@ -1190,8 +1237,7 @@ const trading_times: TradingTimesResponse['trading_times'] = {
                                 { dates: '2021-01-01', descrip: "New Year's Day" },
                             ],
                             name: 'EUR/NZD',
-                            subgroup: 'none',
-                            subgroup_display_name: 'None',
+
                             symbol: 'frxEURNZD',
                             times: { close: ['23:59:59'], open: ['00:00:00'], settlement: '23:59:59' },
                             trading_days: ['Mon', 'Tue', 'Wed', 'Thu', 'Fri'],
@@ -1203,8 +1249,7 @@ const trading_times: TradingTimesResponse['trading_times'] = {
                                 { dates: '2021-01-01', descrip: "New Year's Day" },
                             ],
                             name: 'GBP/CAD',
-                            subgroup: 'none',
-                            subgroup_display_name: 'None',
+
                             symbol: 'frxGBPCAD',
                             times: { close: ['23:59:59'], open: ['00:00:00'], settlement: '23:59:59' },
                             trading_days: ['Mon', 'Tue', 'Wed', 'Thu', 'Fri'],
@@ -1216,8 +1261,7 @@ const trading_times: TradingTimesResponse['trading_times'] = {
                                 { dates: '2021-01-01', descrip: "New Year's Day" },
                             ],
                             name: 'GBP/CHF',
-                            subgroup: 'none',
-                            subgroup_display_name: 'None',
+
                             symbol: 'frxGBPCHF',
                             times: { close: ['23:59:59'], open: ['00:00:00'], settlement: '23:59:59' },
                             trading_days: ['Mon', 'Tue', 'Wed', 'Thu', 'Fri'],
@@ -1229,8 +1273,7 @@ const trading_times: TradingTimesResponse['trading_times'] = {
                                 { dates: '2021-01-01', descrip: "New Year's Day" },
                             ],
                             name: 'GBP/NOK',
-                            subgroup: 'none',
-                            subgroup_display_name: 'None',
+
                             symbol: 'frxGBPNOK',
                             times: { close: ['23:59:59'], open: ['00:00:00'], settlement: '23:59:59' },
                             trading_days: ['Mon', 'Tue', 'Wed', 'Thu', 'Fri'],
@@ -1242,8 +1285,7 @@ const trading_times: TradingTimesResponse['trading_times'] = {
                                 { dates: '2021-01-01', descrip: "New Year's Day" },
                             ],
                             name: 'GBP/NZD',
-                            subgroup: 'none',
-                            subgroup_display_name: 'None',
+
                             symbol: 'frxGBPNZD',
                             times: { close: ['23:59:59'], open: ['00:00:00'], settlement: '23:59:59' },
                             trading_days: ['Mon', 'Tue', 'Wed', 'Thu', 'Fri'],
@@ -1255,8 +1297,7 @@ const trading_times: TradingTimesResponse['trading_times'] = {
                                 { dates: '2021-01-01', descrip: "New Year's Day" },
                             ],
                             name: 'NZD/JPY',
-                            subgroup: 'none',
-                            subgroup_display_name: 'None',
+
                             symbol: 'frxNZDJPY',
                             times: { close: ['23:59:59'], open: ['00:00:00'], settlement: '23:59:59' },
                             trading_days: ['Mon', 'Tue', 'Wed', 'Thu', 'Fri'],
@@ -1268,8 +1309,7 @@ const trading_times: TradingTimesResponse['trading_times'] = {
                                 { dates: '2021-01-01', descrip: "New Year's Day" },
                             ],
                             name: 'NZD/USD',
-                            subgroup: 'none',
-                            subgroup_display_name: 'None',
+
                             symbol: 'frxNZDUSD',
                             times: { close: ['23:59:59'], open: ['00:00:00'], settlement: '23:59:59' },
                             trading_days: ['Mon', 'Tue', 'Wed', 'Thu', 'Fri'],
@@ -1281,8 +1321,7 @@ const trading_times: TradingTimesResponse['trading_times'] = {
                                 { dates: '2021-01-01', descrip: "New Year's Day" },
                             ],
                             name: 'USD/MXN',
-                            subgroup: 'none',
-                            subgroup_display_name: 'None',
+
                             symbol: 'frxUSDMXN',
                             times: { close: ['23:59:59'], open: ['00:00:00'], settlement: '23:59:59' },
                             trading_days: ['Mon', 'Tue', 'Wed', 'Thu', 'Fri'],
@@ -1294,8 +1333,7 @@ const trading_times: TradingTimesResponse['trading_times'] = {
                                 { dates: '2021-01-01', descrip: "New Year's Day" },
                             ],
                             name: 'USD/NOK',
-                            subgroup: 'none',
-                            subgroup_display_name: 'None',
+
                             symbol: 'frxUSDNOK',
                             times: { close: ['23:59:59'], open: ['00:00:00'], settlement: '23:59:59' },
                             trading_days: ['Mon', 'Tue', 'Wed', 'Thu', 'Fri'],
@@ -1307,8 +1345,7 @@ const trading_times: TradingTimesResponse['trading_times'] = {
                                 { dates: '2021-01-01', descrip: "New Year's Day" },
                             ],
                             name: 'USD/PLN',
-                            subgroup: 'none',
-                            subgroup_display_name: 'None',
+
                             symbol: 'frxUSDPLN',
                             times: { close: ['23:59:59'], open: ['00:00:00'], settlement: '23:59:59' },
                             trading_days: ['Mon', 'Tue', 'Wed', 'Thu', 'Fri'],
@@ -1320,8 +1357,7 @@ const trading_times: TradingTimesResponse['trading_times'] = {
                                 { dates: '2021-01-01', descrip: "New Year's Day" },
                             ],
                             name: 'USD/SEK',
-                            subgroup: 'none',
-                            subgroup_display_name: 'None',
+
                             symbol: 'frxUSDSEK',
                             times: { close: ['23:59:59'], open: ['00:00:00'], settlement: '23:59:59' },
                             trading_days: ['Mon', 'Tue', 'Wed', 'Thu', 'Fri'],
@@ -1343,8 +1379,7 @@ const trading_times: TradingTimesResponse['trading_times'] = {
                                 { dates: '2021-01-01', descrip: "New Year's Day" },
                             ],
                             name: 'AUD Basket',
-                            subgroup: 'none',
-                            subgroup_display_name: 'None',
+
                             symbol: 'WLDAUD',
                             times: { close: ['23:59:59'], open: ['00:00:00'], settlement: '23:59:59' },
                             trading_days: ['Mon', 'Tue', 'Wed', 'Thu', 'Fri'],
@@ -1356,8 +1391,7 @@ const trading_times: TradingTimesResponse['trading_times'] = {
                                 { dates: '2021-01-01', descrip: "New Year's Day" },
                             ],
                             name: 'EUR Basket',
-                            subgroup: 'none',
-                            subgroup_display_name: 'None',
+
                             symbol: 'WLDEUR',
                             times: { close: ['23:59:59'], open: ['00:00:00'], settlement: '23:59:59' },
                             trading_days: ['Mon', 'Tue', 'Wed', 'Thu', 'Fri'],
@@ -1369,8 +1403,7 @@ const trading_times: TradingTimesResponse['trading_times'] = {
                                 { dates: '2021-01-01', descrip: "New Year's Day" },
                             ],
                             name: 'GBP Basket',
-                            subgroup: 'none',
-                            subgroup_display_name: 'None',
+
                             symbol: 'WLDGBP',
                             times: { close: ['23:59:59'], open: ['00:00:00'], settlement: '23:59:59' },
                             trading_days: ['Mon', 'Tue', 'Wed', 'Thu', 'Fri'],
@@ -1382,8 +1415,7 @@ const trading_times: TradingTimesResponse['trading_times'] = {
                                 { dates: '2021-01-01', descrip: "New Year's Day" },
                             ],
                             name: 'USD Basket',
-                            subgroup: 'none',
-                            subgroup_display_name: 'None',
+
                             symbol: 'WLDUSD',
                             times: { close: ['23:59:59'], open: ['00:00:00'], settlement: '23:59:59' },
                             trading_days: ['Mon', 'Tue', 'Wed', 'Thu', 'Fri'],
@@ -1400,8 +1432,7 @@ const trading_times: TradingTimesResponse['trading_times'] = {
                                 { dates: '2021-01-01', descrip: "New Year's Day" },
                             ],
                             name: 'Gold Basket',
-                            subgroup: 'none',
-                            subgroup_display_name: 'None',
+
                             symbol: 'WLDXAU',
                             times: { close: ['23:59:59'], open: ['00:00:00'], settlement: '23:59:59' },
                             trading_days: ['Mon', 'Tue', 'Wed', 'Thu', 'Fri'],
@@ -1428,8 +1459,7 @@ const trading_times: TradingTimesResponse['trading_times'] = {
                                 { dates: '2021-06-14', descrip: "Queen's Birthday Holiday" },
                             ],
                             name: 'Australian Index',
-                            subgroup: 'none',
-                            subgroup_display_name: 'None',
+
                             symbol: 'OTC_AS51',
                             times: {
                                 close: ['05:30:00', '19:00:00'],
@@ -1455,8 +1485,7 @@ const trading_times: TradingTimesResponse['trading_times'] = {
                                 { dates: '2021-10-14', descrip: 'Chung Yeung Festival' },
                             ],
                             name: 'Hong Kong Index',
-                            subgroup: 'none',
-                            subgroup_display_name: 'None',
+
                             symbol: 'OTC_HSI',
                             times: {
                                 close: ['04:00:00', '08:00:00'],
@@ -1485,8 +1514,7 @@ const trading_times: TradingTimesResponse['trading_times'] = {
                                 { dates: '2021-11-03', descrip: 'Culture Day' },
                             ],
                             name: 'Japanese Index',
-                            subgroup: 'none',
-                            subgroup_display_name: 'None',
+
                             symbol: 'OTC_N225',
                             times: { close: ['20:00:00'], open: ['00:00:00'], settlement: '22:00:00' },
                             trading_days: ['Mon', 'Tue', 'Wed', 'Thu', 'Fri'],
@@ -1504,8 +1532,7 @@ const trading_times: TradingTimesResponse['trading_times'] = {
                                 { dates: '2021-04-05', descrip: 'Easter Monday' },
                             ],
                             name: 'Dutch Index',
-                            subgroup: 'none',
-                            subgroup_display_name: 'None',
+
                             symbol: 'OTC_AEX',
                             times: { close: ['20:30:00'], open: ['07:00:00'], settlement: '22:30:00' },
                             trading_days: ['Mon', 'Tue', 'Wed', 'Thu', 'Fri'],
@@ -1518,8 +1545,7 @@ const trading_times: TradingTimesResponse['trading_times'] = {
                                 { dates: '2021-04-05', descrip: 'Easter Monday' },
                             ],
                             name: 'Euro 50 Index',
-                            subgroup: 'none',
-                            subgroup_display_name: 'None',
+
                             symbol: 'OTC_SX5E',
                             times: { close: ['20:00:00'], open: ['07:00:00'], settlement: '22:00:00' },
                             trading_days: ['Mon', 'Tue', 'Wed', 'Thu', 'Fri'],
@@ -1532,8 +1558,7 @@ const trading_times: TradingTimesResponse['trading_times'] = {
                                 { dates: '2021-04-05', descrip: 'Easter Monday' },
                             ],
                             name: 'French Index',
-                            subgroup: 'none',
-                            subgroup_display_name: 'None',
+
                             symbol: 'OTC_FCHI',
                             times: { close: ['20:30:00'], open: ['07:00:00'], settlement: '22:30:00' },
                             trading_days: ['Mon', 'Tue', 'Wed', 'Thu', 'Fri'],
@@ -1549,8 +1574,7 @@ const trading_times: TradingTimesResponse['trading_times'] = {
                                 { dates: '2021-05-24', descrip: 'Whit Monday' },
                             ],
                             name: 'German Index',
-                            subgroup: 'none',
-                            subgroup_display_name: 'None',
+
                             symbol: 'OTC_GDAXI',
                             times: { close: ['20:30:00'], open: ['07:00:00'], settlement: '22:30:00' },
                             trading_days: ['Mon', 'Tue', 'Wed', 'Thu', 'Fri'],
@@ -1567,8 +1591,7 @@ const trading_times: TradingTimesResponse['trading_times'] = {
                                 { dates: '2021-05-24', descrip: 'Whit Monday' },
                             ],
                             name: 'Swiss Index',
-                            subgroup: 'none',
-                            subgroup_display_name: 'None',
+
                             symbol: 'OTC_SSMI',
                             times: { close: ['17:00:00'], open: ['08:00:00'], settlement: '19:00:00' },
                             trading_days: ['Mon', 'Tue', 'Wed', 'Thu', 'Fri'],
@@ -1585,8 +1608,7 @@ const trading_times: TradingTimesResponse['trading_times'] = {
                                 { dates: '2021-08-30', descrip: 'Summer Bank Holiday' },
                             ],
                             name: 'UK Index',
-                            subgroup: 'none',
-                            subgroup_display_name: 'None',
+
                             symbol: 'OTC_FTSE',
                             times: { close: ['21:00:00'], open: ['07:00:00'], settlement: '23:00:00' },
                             trading_days: ['Mon', 'Tue', 'Wed', 'Thu', 'Fri'],
@@ -1609,8 +1631,7 @@ const trading_times: TradingTimesResponse['trading_times'] = {
                                 { dates: '2021-09-06', descrip: 'Labor Day' },
                             ],
                             name: 'US Index',
-                            subgroup: 'none',
-                            subgroup_display_name: 'None',
+
                             symbol: 'OTC_SPC',
                             times: { close: ['21:00:00'], open: ['07:00:00'], settlement: '23:00:00' },
                             trading_days: ['Mon', 'Tue', 'Wed', 'Thu', 'Fri'],
@@ -1628,8 +1649,7 @@ const trading_times: TradingTimesResponse['trading_times'] = {
                                 { dates: '2021-09-06', descrip: 'Labor Day' },
                             ],
                             name: 'US Tech Index',
-                            subgroup: 'none',
-                            subgroup_display_name: 'None',
+
                             symbol: 'OTC_NDX',
                             times: { close: ['21:00:00'], open: ['07:00:00'], settlement: '23:00:00' },
                             trading_days: ['Mon', 'Tue', 'Wed', 'Thu', 'Fri'],
@@ -1647,8 +1667,7 @@ const trading_times: TradingTimesResponse['trading_times'] = {
                                 { dates: '2021-09-06', descrip: 'Labor Day' },
                             ],
                             name: 'Wall Street Index',
-                            subgroup: 'none',
-                            subgroup_display_name: 'None',
+
                             symbol: 'OTC_DJI',
                             times: { close: ['21:00:00'], open: ['07:00:00'], settlement: '23:00:00' },
                             trading_days: ['Mon', 'Tue', 'Wed', 'Thu', 'Fri'],
@@ -1675,8 +1694,7 @@ const trading_times: TradingTimesResponse['trading_times'] = {
                                 { dates: '2021-04-02', descrip: 'Good Friday' },
                             ],
                             name: 'Gold/USD',
-                            subgroup: 'none',
-                            subgroup_display_name: 'None',
+
                             symbol: 'frxXAUUSD',
                             times: { close: ['23:59:59'], open: ['00:00:00'], settlement: '23:59:59' },
                             trading_days: ['Mon', 'Tue', 'Wed', 'Thu', 'Fri'],
@@ -1693,8 +1711,7 @@ const trading_times: TradingTimesResponse['trading_times'] = {
                                 { dates: '2021-04-02', descrip: 'Good Friday' },
                             ],
                             name: 'Palladium/USD',
-                            subgroup: 'none',
-                            subgroup_display_name: 'None',
+
                             symbol: 'frxXPDUSD',
                             times: { close: ['23:59:59'], open: ['00:00:00'], settlement: '23:59:59' },
                             trading_days: ['Mon', 'Tue', 'Wed', 'Thu', 'Fri'],
@@ -1711,8 +1728,7 @@ const trading_times: TradingTimesResponse['trading_times'] = {
                                 { dates: '2021-04-02', descrip: 'Good Friday' },
                             ],
                             name: 'Platinum/USD',
-                            subgroup: 'none',
-                            subgroup_display_name: 'None',
+
                             symbol: 'frxXPTUSD',
                             times: { close: ['23:59:59'], open: ['00:00:00'], settlement: '23:59:59' },
                             trading_days: ['Mon', 'Tue', 'Wed', 'Thu', 'Fri'],
@@ -1729,8 +1745,7 @@ const trading_times: TradingTimesResponse['trading_times'] = {
                                 { dates: '2021-04-02', descrip: 'Good Friday' },
                             ],
                             name: 'Silver/USD',
-                            subgroup: 'none',
-                            subgroup_display_name: 'None',
+
                             symbol: 'frxXAGUSD',
                             times: { close: ['23:59:59'], open: ['00:00:00'], settlement: '23:59:59' },
                             trading_days: ['Mon', 'Tue', 'Wed', 'Thu', 'Fri'],
@@ -1753,8 +1768,7 @@ const trading_times: TradingTimesResponse['trading_times'] = {
                                 { dates: '2021-08-30', descrip: 'Summer Bank Holiday' },
                             ],
                             name: 'Oil/USD',
-                            subgroup: 'none',
-                            subgroup_display_name: 'None',
+
                             symbol: 'frxBROUSD',
                             times: { close: ['19:30:00'], open: ['08:15:00'], settlement: '23:59:59' },
                             trading_days: ['Mon', 'Tue', 'Wed', 'Thu', 'Fri'],
@@ -1772,8 +1786,7 @@ const trading_times: TradingTimesResponse['trading_times'] = {
                         {
                             events: [],
                             name: 'Volatility 10 (1s) Index',
-                            subgroup: 'none',
-                            subgroup_display_name: 'None',
+
                             symbol: '1HZ10V',
                             times: { close: ['23:59:59'], open: ['00:00:00'], settlement: '23:59:59' },
                             trading_days: ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'],
@@ -1781,8 +1794,7 @@ const trading_times: TradingTimesResponse['trading_times'] = {
                         {
                             events: [],
                             name: 'Volatility 10 Index',
-                            subgroup: 'none',
-                            subgroup_display_name: 'None',
+
                             symbol: 'R_10',
                             times: { close: ['23:59:59'], open: ['00:00:00'], settlement: '23:59:59' },
                             trading_days: ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'],
@@ -1790,8 +1802,7 @@ const trading_times: TradingTimesResponse['trading_times'] = {
                         {
                             events: [],
                             name: 'Volatility 25 (1s) Index',
-                            subgroup: 'none',
-                            subgroup_display_name: 'None',
+
                             symbol: '1HZ25V',
                             times: { close: ['23:59:59'], open: ['00:00:00'], settlement: '23:59:59' },
                             trading_days: ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'],
@@ -1799,8 +1810,7 @@ const trading_times: TradingTimesResponse['trading_times'] = {
                         {
                             events: [],
                             name: 'Volatility 25 Index',
-                            subgroup: 'none',
-                            subgroup_display_name: 'None',
+
                             symbol: 'R_25',
                             times: { close: ['23:59:59'], open: ['00:00:00'], settlement: '23:59:59' },
                             trading_days: ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'],
@@ -1808,8 +1818,7 @@ const trading_times: TradingTimesResponse['trading_times'] = {
                         {
                             events: [],
                             name: 'Volatility 50 (1s) Index',
-                            subgroup: 'none',
-                            subgroup_display_name: 'None',
+
                             symbol: '1HZ50V',
                             times: { close: ['23:59:59'], open: ['00:00:00'], settlement: '23:59:59' },
                             trading_days: ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'],
@@ -1817,8 +1826,7 @@ const trading_times: TradingTimesResponse['trading_times'] = {
                         {
                             events: [],
                             name: 'Volatility 50 Index',
-                            subgroup: 'none',
-                            subgroup_display_name: 'None',
+
                             symbol: 'R_50',
                             times: { close: ['23:59:59'], open: ['00:00:00'], settlement: '23:59:59' },
                             trading_days: ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'],
@@ -1826,8 +1834,7 @@ const trading_times: TradingTimesResponse['trading_times'] = {
                         {
                             events: [],
                             name: 'Volatility 75 (1s) Index',
-                            subgroup: 'none',
-                            subgroup_display_name: 'None',
+
                             symbol: '1HZ75V',
                             times: { close: ['23:59:59'], open: ['00:00:00'], settlement: '23:59:59' },
                             trading_days: ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'],
@@ -1835,8 +1842,7 @@ const trading_times: TradingTimesResponse['trading_times'] = {
                         {
                             events: [],
                             name: 'Volatility 75 Index',
-                            subgroup: 'none',
-                            subgroup_display_name: 'None',
+
                             symbol: 'R_75',
                             times: { close: ['23:59:59'], open: ['00:00:00'], settlement: '23:59:59' },
                             trading_days: ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'],
@@ -1844,8 +1850,7 @@ const trading_times: TradingTimesResponse['trading_times'] = {
                         {
                             events: [],
                             name: 'Volatility 100 (1s) Index',
-                            subgroup: 'none',
-                            subgroup_display_name: 'None',
+
                             symbol: '1HZ100V',
                             times: { close: ['23:59:59'], open: ['00:00:00'], settlement: '23:59:59' },
                             trading_days: ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'],
@@ -1853,8 +1858,7 @@ const trading_times: TradingTimesResponse['trading_times'] = {
                         {
                             events: [],
                             name: 'Volatility 100 Index',
-                            subgroup: 'none',
-                            subgroup_display_name: 'None',
+
                             symbol: 'R_100',
                             times: { close: ['23:59:59'], open: ['00:00:00'], settlement: '23:59:59' },
                             trading_days: ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'],
@@ -1862,8 +1866,7 @@ const trading_times: TradingTimesResponse['trading_times'] = {
                         {
                             events: [],
                             name: 'Volatility 200 (1s) Index',
-                            subgroup: 'none',
-                            subgroup_display_name: 'None',
+
                             symbol: '1HZ200V',
                             times: { close: ['23:59:59'], open: ['00:00:00'], settlement: '23:59:59' },
                             trading_days: ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'],
@@ -1871,8 +1874,7 @@ const trading_times: TradingTimesResponse['trading_times'] = {
                         {
                             events: [],
                             name: 'Volatility 300 (1s) Index',
-                            subgroup: 'none',
-                            subgroup_display_name: 'None',
+
                             symbol: '1HZ300V',
                             times: { close: ['23:59:59'], open: ['00:00:00'], settlement: '23:59:59' },
                             trading_days: ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'],
@@ -1885,8 +1887,7 @@ const trading_times: TradingTimesResponse['trading_times'] = {
                         {
                             events: [],
                             name: 'Bear Market Index',
-                            subgroup: 'none',
-                            subgroup_display_name: 'None',
+
                             symbol: 'RDBEAR',
                             times: { close: ['23:59:59'], open: ['00:00:00'], settlement: '23:59:59' },
                             trading_days: ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'],
@@ -1894,8 +1895,7 @@ const trading_times: TradingTimesResponse['trading_times'] = {
                         {
                             events: [],
                             name: 'Bull Market Index',
-                            subgroup: 'none',
-                            subgroup_display_name: 'None',
+
                             symbol: 'RDBULL',
                             times: { close: ['23:59:59'], open: ['00:00:00'], settlement: '23:59:59' },
                             trading_days: ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'],
@@ -1913,8 +1913,7 @@ const trading_times: TradingTimesResponse['trading_times'] = {
                         {
                             events: [],
                             name: 'BTC/USD',
-                            subgroup: 'none',
-                            subgroup_display_name: 'None',
+
                             symbol: 'cryBTCUSD',
                             times: { close: ['23:59:59'], open: ['00:00:00'], settlement: '23:59:59' },
                             trading_days: ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'],
@@ -1922,8 +1921,7 @@ const trading_times: TradingTimesResponse['trading_times'] = {
                         {
                             events: [],
                             name: 'ETH/USD',
-                            subgroup: 'none',
-                            subgroup_display_name: 'None',
+
                             symbol: 'cryETHUSD',
                             times: { close: ['23:59:59'], open: ['00:00:00'], settlement: '23:59:59' },
                             trading_days: ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'],
