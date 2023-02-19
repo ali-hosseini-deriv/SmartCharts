@@ -31,7 +31,7 @@ import { ConnectionManager, StreamManager } from './connection';
 import NetworkMonitor from './connection/NetworkMonitor';
 import Notification from './Notification';
 
-setSmartChartsPublicPath('./dist/');
+setSmartChartsPublicPath('/');
 const isMobile = window.navigator.userAgent.toLowerCase().includes('mobi');
 if (process.env.NODE_ENV !== 'production') {
     whyDidYouRender(React, {

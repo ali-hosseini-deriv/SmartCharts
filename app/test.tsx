@@ -39,7 +39,7 @@ import { masterData, MockActiveSymbol, MockTradingTime } from './initialData';
 import Notification from './Notification';
 import './test.scss';
 
-setSmartChartsPublicPath('./dist/');
+setSmartChartsPublicPath('/');
 const isMobile = window.navigator.userAgent.toLowerCase().includes('mobi');
 if (process.env.NODE_ENV === 'production') {
     whyDidYouRender(React, {

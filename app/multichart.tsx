@@ -20,7 +20,7 @@ import ReactDOM from 'react-dom';
 import './test.scss';
 import { ConnectionManager, StreamManager } from './connection';
 
-setSmartChartsPublicPath('./dist/');
+setSmartChartsPublicPath('/');
 
 configure({ enforceActions: 'observed' });
 
