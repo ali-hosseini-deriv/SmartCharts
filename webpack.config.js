@@ -7,6 +7,7 @@ const StyleLintPlugin = require('stylelint-webpack-plugin');
 const SpriteLoaderPlugin = require('svg-sprite-loader/plugin');
 const ForkTsCheckerWebpackPlugin = require('fork-ts-checker-webpack-plugin');
 const ESLintPlugin = require('eslint-webpack-plugin');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 const production = process.env.NODE_ENV === 'production';
 const isApp = process.env.BUILD_MODE === 'app';
@@ -32,6 +33,8 @@ const PostCSSSVGO = require('postcss-svgo');
 
 const config = {
     devtool: 'source-map',
+    mode: production ? 'production' : 'development',
+    amd: false,
     entry: path.resolve(__dirname, './src/index.ts'),
     output,
     resolve: {
@@ -43,9 +46,10 @@ const config = {
         extensions: ['.ts', '.tsx', '.js'],
     },
     devServer: {
+        static: path.resolve(__dirname, 'dist'),
         devMiddleware: {
             writeToDisk: true,
-            publicPath: '/dist/',
+            // publicPath: 'dist',
         },
     },
     module: {
@@ -82,7 +86,7 @@ const config = {
                         loader: 'postcss-loader',
                         options: {
                             postcssOptions: {
-
+                                ident: 'postcss',
                                 plugins: loader => [
                                     PostCSSImport({ root: loader.resourcePath }),
                                     PostCSSPresetEnv(),
@@ -119,6 +123,9 @@ const config = {
                 test: /\.(js|jsx|ts|tsx)$/,
                 // exclude: /node_modules/,
                 loader: 'babel-loader',
+                options: {
+                    presets: ['@babel/preset-env'],
+                },
             },
             {
                 test: /\.po$/,
@@ -143,12 +150,13 @@ const config = {
         ],
     },
     plugins: [
+        new HtmlWebpackPlugin({ template: './index.html'}),
         new ESLintPlugin(options),
         new webpack.ProvidePlugin({
             t: [path.resolve(__dirname, './src/Translation.ts'), 't'],
         }),
         new MiniCssExtractPlugin({ filename: 'smartcharts.css' }),
-        new StyleLintPlugin({customSyntax: 'postcss-scss'}),
+        new StyleLintPlugin({ customSyntax: 'postcss-scss' }),
         new SpriteLoaderPlugin(),
         new ForkTsCheckerWebpackPlugin(),
     ],
