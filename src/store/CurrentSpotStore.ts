@@ -1,9 +1,10 @@
 import { when } from 'mobx';
 import MainStore from '.';
-import { red as RED } from '../../sass/_themes.scss';
+import Theme from '../../sass/_themes.scss';
 import Context from '../components/ui/Context';
 import { is_browser, patchPixelFromChart } from '../utils';
 
+const RED = Theme.red;
 class CurrentSpotStore {
     mainStore: MainStore;
     constructor(mainStore: MainStore) {
